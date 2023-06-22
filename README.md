@@ -204,7 +204,7 @@ jobs:
   
 - [GitHub Actions Docs](https://docs.github.com/en/actions)
 
-- [AWS Container Registry](https://docs.aws.amazon.com/ko_kr/ecr/index.html)
+- [AWS Elastic Container Registry](https://docs.aws.amazon.com/ko_kr/ecr/index.html)
 
 - [GCP Artifact Registry](https://cloud.google.com/artifact-registry/docs?hl=ko)
 
