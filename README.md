@@ -38,7 +38,7 @@
 
 #### 토큰 생성 명령어
 
-- AWS CLI를 설치
+- AWS CLI 설치
 
   ```yaml
     curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
