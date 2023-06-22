@@ -58,8 +58,6 @@
 
   ```
 
----
-
 #### GitHub Actions Workflow
 
 ```yaml
@@ -126,6 +124,8 @@ jobs:
 - `AWS_ACCESS_KEY_ID`: AWS 액세스 키 ID
 - `AWS_SECRET_ACCESS_KEY`: AWS 시크릿 액세스 키
 - `CLOUDTYPE_TOKEN`: 클라우드타입 API 키
+
+---
 
 ### GCP Artifact Registry
 
