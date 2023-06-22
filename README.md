@@ -8,7 +8,7 @@
 <br/>
 <br/>
 
-# 클라우드타입 웨비나 #02 <br/> GitHub Actions, Private Registry를 활용한 CI/CD 파이프라인 구축하기 <!-- omit in toc -->
+# 클라우드타입 웨비나 #02 <br/> GitHub Actions, Private Registry를 활용한<br/>CI/CD 파이프라인 구축하기 <!-- omit in toc -->
 
 ## 목차 <!-- omit in toc -->
 
