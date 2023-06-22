@@ -132,7 +132,7 @@ jobs:
 #### GitHub Actions Workflow
 
 ```yaml
-name: Create and publish a Docker image to AWS ECR, Deploy to Cloudtype
+name: Create and publish a Docker image to GCP Artifact Registry, Deploy to Cloudtype
 
 on:
   push:
@@ -140,7 +140,7 @@ on:
       - main
 
 env:
-  REGISTRY: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
+  REGISTRY: ${{ secrets.GCP_LOCATION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GAR_REPOSITORY }}
   IMAGE_NAME: [이미지명]
 
 jobs:
@@ -151,14 +151,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
+      
       - name: Log in to the Container registry
-        uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+        uses: docker/login-action@v2
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          password: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
+          registry: ${{ secrets.GCP_LOCATION }}-docker.pkg.dev
+          username: _json_key
+          password: ${{ secrets.GAR_JSON_KEY }}
+          
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
