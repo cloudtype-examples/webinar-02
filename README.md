@@ -58,6 +58,8 @@
 
   ```
 
+---
+
 #### GitHub Actions Workflow
 
 ```yaml
