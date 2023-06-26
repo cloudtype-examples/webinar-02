@@ -140,7 +140,7 @@ on:
       - main
 
 env:
-  REGISTRY: ${{ secrets.GCP_LOCATION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GAR_REPOSITORY }}
+  REGISTRY: ${{ secrets.GAR_REGISTRY }}
   IMAGE_NAME: [이미지명]
 
 jobs:
@@ -155,7 +155,7 @@ jobs:
       - name: Log in to the Container registry
         uses: docker/login-action@v2
         with:
-          registry: ${{ secrets.GCP_LOCATION }}-docker.pkg.dev
+          registry: ${{ env.REGISTRY }}
           username: _json_key
           password: ${{ secrets.GAR_JSON_KEY }}
           
