@@ -58,6 +58,13 @@
 
   ```
 
+#### GitHub Repository Secrets
+
+- `AWS_ECR_REGISTRY`: AWS ECR Registry 주소(리포지토리 경로 제외)
+- `AWS_ACCESS_KEY_ID`: AWS 액세스 키 ID
+- `AWS_SECRET_ACCESS_KEY`: AWS 시크릿 액세스 키
+- `CLOUDTYPE_TOKEN`: 클라우드타입 API 키
+
 #### GitHub Actions Workflow
 
 ```yaml
@@ -117,16 +124,15 @@ jobs:
               image: ${{ steps.meta.outputs.tags }}
 ```
 
-#### GitHub Repository Secrets
-
-- `AWS_ECR_REGISTRY`: AWS ECR Registry 주소(리포지토리 경로 제외)
-- `AWS_ACCESS_KEY_ID`: AWS 액세스 키 ID
-- `AWS_SECRET_ACCESS_KEY`: AWS 시크릿 액세스 키
-- `CLOUDTYPE_TOKEN`: 클라우드타입 API 키
-
 ---
 
 ### GCP Artifact Registry
+
+#### GitHub Repository Secrets
+
+- `GAR_REGISTRY`: Artifact Registry 주소
+- `GAR_JSON_KEY`: Artifact Registry 서비스 계정 JSON KEY
+- `CLOUDTYPE_TOKEN`: 클라우드타입 API 키
 
 #### GitHub Actions Workflow
 
@@ -187,11 +193,7 @@ jobs:
               image: ${{ steps.meta.outputs.tags }}
 ```
 
-#### GitHub Repository Secrets
-
-- `GAR_REGISTRY`: Artifact Registry 주소
-- `GAR_JSON_KEY`: Artifact Registry 서비스 계정 JSON KEY
-- `CLOUDTYPE_TOKEN`: 클라우드타입 API 키
+---
 
 ## 📖 References
 
