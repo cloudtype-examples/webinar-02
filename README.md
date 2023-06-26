@@ -69,7 +69,7 @@ on:
       - main
 
 env:
-  REGISTRY: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
+  REGISTRY: ${{ secrets.AWS_ECR_REGISTRY }}
   IMAGE_NAME: [이미지명]
 
 jobs:
@@ -119,8 +119,7 @@ jobs:
 
 #### GitHub Repository Secrets
 
-- `AWS_ACCOUNT_NUMBER`: AWS 계정 번호
-- `AWS_REGION`: AWS 리전
+- `AWS_ECR_REGISTRY`: AWS ECR Registry 주소(리포지토리 경로 제외)
 - `AWS_ACCESS_KEY_ID`: AWS 액세스 키 ID
 - `AWS_SECRET_ACCESS_KEY`: AWS 시크릿 액세스 키
 - `CLOUDTYPE_TOKEN`: 클라우드타입 API 키
@@ -190,9 +189,7 @@ jobs:
 
 #### GitHub Repository Secrets
 
-- `GCP_LOCATION`: GCP 리전
-- `GCP_PROJECT_ID`: GCP 프로젝트 ID
-- `GAR_REPOSITORY`: Artifact Registry 저장소명
+- `GAR_REGISTRY`: Artifact Registry 주소
 - `GAR_JSON_KEY`: Artifact Registry 서비스 계정 JSON KEY
 - `CLOUDTYPE_TOKEN`: 클라우드타입 API 키
 
